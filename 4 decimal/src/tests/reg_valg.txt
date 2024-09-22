@@ -1,0 +1,4 @@
+Conditional jump
+are possibly lost
+are definitely lost
+are indirectly lost

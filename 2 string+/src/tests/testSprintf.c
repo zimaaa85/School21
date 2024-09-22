@@ -1,0 +1,193 @@
+#include "sprintfBonusTest.h"
+#include "sprintfFlagsTest.h"
+#include "sprintfSpecTest.h"
+
+int main() {
+  int failed = 0;
+
+  Suite *s = specSuite();
+  Suite *s1 = flagsSuite();
+  Suite *s2 = bonusSuite();
+
+  SRunner *sr = srunner_create(s);
+  srunner_add_suite(sr, s1);
+  srunner_add_suite(sr, s2);
+
+  srunner_run_all(sr, CK_NORMAL);
+  failed = srunner_ntests_failed(sr);
+  srunner_free(sr);
+
+  return (failed == 0) ? EXIT_SUCCESS : EXIT_FAILURE;
+}
+
+Suite *specSuite() {
+  Suite *s = NULL;
+  TCase *tSpec = NULL;
+  s = suite_create("specifiers");
+  tSpec = tcase_create("specCase");
+  tcase_add_test(tSpec, specTest1);
+  tcase_add_test(tSpec, specTest2);
+  tcase_add_test(tSpec, specTest3);
+  tcase_add_test(tSpec, specTest4);
+  tcase_add_test(tSpec, specTest5);
+  tcase_add_test(tSpec, specTest6);
+  tcase_add_test(tSpec, specTest7);
+  tcase_add_test(tSpec, specTest8);
+  tcase_add_test(tSpec, specTest9);
+  tcase_add_test(tSpec, specTest10);
+  tcase_add_test(tSpec, specTest11);
+  tcase_add_test(tSpec, specTest12);
+  tcase_add_test(tSpec, specTest13);
+  tcase_add_test(tSpec, specTest14);
+  tcase_add_test(tSpec, specTest15);
+  tcase_add_test(tSpec, specTest16);
+  tcase_add_test(tSpec, specTest17);
+  tcase_add_test(tSpec, specTest18);
+  tcase_add_test(tSpec, specTest19);
+  tcase_add_test(tSpec, specTest20);
+  tcase_add_test(tSpec, specTest21);
+  tcase_add_test(tSpec, specTest22);
+  tcase_add_test(tSpec, specTest23);
+  tcase_add_test(tSpec, specTest24);
+  tcase_add_test(tSpec, specTest25);
+  tcase_add_test(tSpec, specTest26);
+  tcase_add_test(tSpec, specTest27);
+  tcase_add_test(tSpec, specTest28);
+  tcase_add_test(tSpec, specTest29);
+  tcase_add_test(tSpec, specTest30);
+  tcase_add_test(tSpec, specTest31);
+  tcase_add_test(tSpec, specTest32);
+  tcase_add_test(tSpec, specTest33);
+  tcase_add_test(tSpec, specTest34);
+  tcase_add_test(tSpec, specTest35);
+  tcase_add_test(tSpec, specTest36);
+  tcase_add_test(tSpec, specTest37);
+  tcase_add_test(tSpec, specTest38);
+  tcase_add_test(tSpec, specTest39);
+  tcase_add_test(tSpec, specTest40);
+  tcase_add_test(tSpec, specTest41);
+  tcase_add_test(tSpec, specTest42);
+  tcase_add_test(tSpec, specTest43);
+  tcase_add_test(tSpec, specTest44);
+  tcase_add_test(tSpec, specTest45);
+  tcase_add_test(tSpec, specTest46);
+  tcase_add_test(tSpec, specTest47);
+  tcase_add_test(tSpec, specTest48);
+  suite_add_tcase(s, tSpec);
+  return s;
+}
+Suite *flagsSuite() {
+  Suite *s = NULL;
+  TCase *tFlags = NULL;
+  s = suite_create("flags");
+  tFlags = tcase_create("flagsCase");
+  tcase_add_test(tFlags, flagsTest1);
+  tcase_add_test(tFlags, flagsTest2);
+  tcase_add_test(tFlags, flagsTest3);
+  tcase_add_test(tFlags, flagsTest4);
+  tcase_add_test(tFlags, flagsTest5);
+  tcase_add_test(tFlags, flagsTest6);
+  tcase_add_test(tFlags, flagsTest7);
+  tcase_add_test(tFlags, flagsTest8);
+  tcase_add_test(tFlags, flagsTest9);
+  tcase_add_test(tFlags, flagsTest10);
+  tcase_add_test(tFlags, flagsTest11);
+  tcase_add_test(tFlags, flagsTest12);
+  tcase_add_test(tFlags, flagsTest13);
+  tcase_add_test(tFlags, flagsTest14);
+  tcase_add_test(tFlags, flagsTest15);
+  tcase_add_test(tFlags, flagsTest16);
+  tcase_add_test(tFlags, flagsTest17);
+  tcase_add_test(tFlags, flagsTest18);
+  tcase_add_test(tFlags, flagsTest19);
+  tcase_add_test(tFlags, flagsTest20);
+  tcase_add_test(tFlags, flagsTest21);
+  tcase_add_test(tFlags, flagsTest22);
+  tcase_add_test(tFlags, flagsTest23);
+  tcase_add_test(tFlags, flagsTest24);
+  tcase_add_test(tFlags, flagsTest25);
+  tcase_add_test(tFlags, flagsTest26);
+  tcase_add_test(tFlags, flagsTest27);
+  tcase_add_test(tFlags, flagsTest28);
+  suite_add_tcase(s, tFlags);
+  return s;
+}
+
+Suite *bonusSuite() {
+  Suite *s = NULL;
+  TCase *tBonus = NULL;
+  s = suite_create("bonus");
+  tBonus = tcase_create("bonusCase");
+  tcase_add_test(tBonus, bonusTest1);
+  tcase_add_test(tBonus, bonusTest1a);
+  tcase_add_test(tBonus, bonusTest1b);
+  tcase_add_test(tBonus, bonusTest1c);
+  tcase_add_test(tBonus, bonusTest2);
+  tcase_add_test(tBonus, bonusTest2a);
+  tcase_add_test(tBonus, bonusTest2b);
+  tcase_add_test(tBonus, bonusTest2c);
+  tcase_add_test(tBonus, bonusTest3);
+  tcase_add_test(tBonus, bonusTest3a);
+  tcase_add_test(tBonus, bonusTest3b);
+  tcase_add_test(tBonus, bonusTest3c);
+  tcase_add_test(tBonus, bonusTest4);
+  tcase_add_test(tBonus, bonusTest4a);
+  tcase_add_test(tBonus, bonusTest4b);
+  tcase_add_test(tBonus, bonusTest4c);
+  tcase_add_test(tBonus, bonusTest5);
+  tcase_add_test(tBonus, bonusTest5a);
+  tcase_add_test(tBonus, bonusTest5b);
+  tcase_add_test(tBonus, bonusTest5c);
+  tcase_add_test(tBonus, bonusTest6);
+  tcase_add_test(tBonus, bonusTest6a);
+  tcase_add_test(tBonus, bonusTest6b);
+  tcase_add_test(tBonus, bonusTest6c);
+  tcase_add_test(tBonus, bonusTest7);
+  tcase_add_test(tBonus, bonusTest7a);
+  tcase_add_test(tBonus, bonusTest7b);
+  tcase_add_test(tBonus, bonusTest7c);
+  tcase_add_test(tBonus, bonusTest8);
+  tcase_add_test(tBonus, bonusTest8a);
+  tcase_add_test(tBonus, bonusTest8b);
+  tcase_add_test(tBonus, bonusTest8c);
+  tcase_add_test(tBonus, bonusTest9);
+  tcase_add_test(tBonus, bonusTest9a);
+  tcase_add_test(tBonus, bonusTest9b);
+  tcase_add_test(tBonus, bonusTest9c);
+  tcase_add_test(tBonus, bonusTest10);
+  tcase_add_test(tBonus, bonusTest10a);
+  tcase_add_test(tBonus, bonusTest10b);
+  tcase_add_test(tBonus, bonusTest10c);
+  tcase_add_test(tBonus, bonusTest11);
+  tcase_add_test(tBonus, bonusTest12);
+  tcase_add_test(tBonus, bonusTest13);
+  tcase_add_test(tBonus, bonusTest14);
+  tcase_add_test(tBonus, bonusTest15);
+  tcase_add_test(tBonus, bonusTest16);
+  tcase_add_test(tBonus, bonusTest17);
+  tcase_add_test(tBonus, bonusTest18);
+  tcase_add_test(tBonus, bonusTest19);
+  tcase_add_test(tBonus, bonusTest20);
+  tcase_add_test(tBonus, bonusTest21);
+  tcase_add_test(tBonus, bonusTest22);
+  tcase_add_test(tBonus, bonusTest23);
+  tcase_add_test(tBonus, bonusTest24);
+  tcase_add_test(tBonus, bonusTest25);
+  tcase_add_test(tBonus, bonusTest26);
+  tcase_add_test(tBonus, bonusTest27);
+  tcase_add_test(tBonus, bonusTest28);
+  tcase_add_test(tBonus, bonusTest29);
+  tcase_add_test(tBonus, bonusTest30);
+  tcase_add_test(tBonus, bonusTest31);
+  tcase_add_test(tBonus, bonusTest32);
+  tcase_add_test(tBonus, bonusTest33);
+  tcase_add_test(tBonus, bonusTest34);
+  tcase_add_test(tBonus, bonusTest35);
+  tcase_add_test(tBonus, bonusTest37);
+  tcase_add_test(tBonus, bonusTest38);
+  tcase_add_test(tBonus, bonusTest39);
+  tcase_add_test(tBonus, bonusTest40);
+  tcase_add_test(tBonus, bonusTest41);
+  suite_add_tcase(s, tBonus);
+  return s;
+}
